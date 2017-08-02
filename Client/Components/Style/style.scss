@@ -1,5 +1,15 @@
 $purple: rgba(88, 70, 180, 0.66);
-$yellow: rgb(241,235,186);
+$yellow: rgb(252,247,93);
+$white: rgb(255,255,255);
+$blue: rgb(0,120,215);
+$pink: rgb(255,137,188);
+html, body, main, #app, .app {
+  height:100%;
+}
+
+.header {
+    height:8rem;
+}
 // HomePage
 .logolink {
   margin-top: 2px;
@@ -48,26 +58,64 @@ a {
   }
   a {
     font-size: 2rem;
-    color: $yellow;
+    color: $blue;
     width: 12rem;
   }
-  color: $yellow;
-  background-color: $purple;
+  color: $blue;
+  background-color: $white;
+}
+.navbar {
+  border-bottom: solid 2px;
+  border-bottom-color: $blue;
+  border-top: solid 2px $blue;
+  border-top-color: $blue;
+  margin: 0 auto;
+  width: 95%;
 }
 .nav {
-  color: $yellow;
+  color: $blue;
   .nav-tabs {
     border-left: solid;
     border-left-width: 1px;
-    border-color: $yellow;
+    border-color: $blue;
   }
 }
 .nav-tabs>li>a:hover {
-    color: $purple;
+    color: $white;
 }
+
 .nav-tabs>li>a:focus {
-    color: $purple;
+    color: $white;
 }
+
+/////app component
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto 0 auto;
+  width: 94%;
+  .blowupBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+  .imageGallery {
+    border-left: solid 2px $blue;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+  overflow: scroll;
+  }
+  .craftImage {
+    width: 22%;
+    margin: .5rem;
+  }
+  .blowupImage{
+    width: 100%;
+  }
+}
+
 
 .presentationblocks {
   text-align: center;
@@ -107,7 +155,7 @@ a {
   }
 }
 #app {
-  background-color: $yellow;
+  background-color: $white;
   font-family: serif;
 }
 .errorpage {

@@ -1,3 +1,9 @@
+html, body, main, #app, .app {
+  height: 100%; }
+
+.header {
+  height: 8rem; }
+
 .logolink {
   margin-top: 2px;
   background-color: rgba(88, 70, 180, 0.66);
@@ -5,7 +11,7 @@
   border-width: 2px;
   border-color: #0504af;
   border-radius: 50px;
-  color: #f1ebba; }
+  color: #fcf75d; }
 
 .realdeallogo {
   width: 3rem; }
@@ -36,27 +42,57 @@ a {
 
 .navbar {
   margin-bottom: 0;
-  color: #f1ebba;
-  background-color: rgba(88, 70, 180, 0.66); }
+  color: #0078d7;
+  background-color: white; }
   .navbar .btn {
     width: 13rem; }
   .navbar a {
     font-size: 2rem;
-    color: #f1ebba;
+    color: #0078d7;
     width: 12rem; }
 
+.navbar {
+  border-bottom: solid 2px;
+  border-bottom-color: #0078d7;
+  border-top: solid 2px #0078d7;
+  border-top-color: #0078d7;
+  margin: 0 auto;
+  width: 95%; }
+
 .nav {
-  color: #f1ebba; }
+  color: #0078d7; }
   .nav .nav-tabs {
     border-left: solid;
     border-left-width: 1px;
-    border-color: #f1ebba; }
+    border-color: #0078d7; }
 
 .nav-tabs > li > a:hover {
-  color: rgba(88, 70, 180, 0.66); }
+  color: white; }
 
 .nav-tabs > li > a:focus {
-  color: rgba(88, 70, 180, 0.66); }
+  color: white; }
+
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto 0 auto;
+  width: 94%; }
+  .mainBox .blowupBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline; }
+  .mainBox .imageGallery {
+    border-left: solid 2px #0078d7;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    display: inline-table;
+    overflow: scroll; }
+  .mainBox .craftImage {
+    width: 22%;
+    margin: .5rem; }
+  .mainBox .blowupImage {
+    width: 100%; }
 
 .presentationblocks {
   text-align: center;
@@ -79,7 +115,7 @@ a {
     margin-bottom: 2rem; }
   .presentationblocks .present {
     border: 0px;
-    background-color: #f1ebba;
+    background-color: #fcf75d;
     border-bottom-style: ridge;
     border-bottom-width: 3px;
     border-color: #ed3724;
@@ -90,7 +126,7 @@ a {
     width: 26rem; }
 
 #app {
-  background-color: #f1ebba;
+  background-color: white;
   font-family: serif; }
 
 .errorpage {
@@ -113,7 +149,7 @@ a {
     min-width: 65rem; }
     .projectspage .carouselbox .btn {
       background-color: rgba(88, 70, 180, 0.66);
-      color: #f1ebba;
+      color: #fcf75d;
       -webkit-box-shadow: inset 0 1px 5px 5px #7468af;
       box-shadow: inset 0 1px 5px 5px #7468af; }
   .projectspage .project-title {

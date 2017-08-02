@@ -7,12 +7,14 @@ import Nav from './Nav/nav';
 import Personal from './pages/personal';
 import Projects from './pages/projects';
 import Contact from './pages/contact';
+import MRH_LOGO from './assets/MRH.png';
 
 const Approutes = () =>
   <BrowserRouter
     history={createHistory}
   >
     <div className="app">
+      <img className="header" alt="MRHLogo" src={MRH_LOGO} />
       <Nav />
       <Switch>
         <Route path="/" exact component={App} />
