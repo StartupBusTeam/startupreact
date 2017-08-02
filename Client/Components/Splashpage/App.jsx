@@ -4,16 +4,13 @@ import Selections from './selections';
 import ImageGallery from '../SubComponents/ImageGallery'
 import Realdeal from '../assets/real-deal-logo.png';
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor({ selectCategory }) {
+    super({ selectCategory });
     this.state = {
-      images: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,15,16,17],
+      images: [1, 2, 3, 4, 5, 6, 7, 8, 9],
       blowUp: Realdeal,
     };
-    this.pickBlowup = this.pickBlowup.bind(this);
-  }
-  pickBlowup(img) {
-    console.log(img);
+    this.selectCategory = selectCategory;
   }
   render() {
     return (
@@ -23,7 +20,7 @@ class App extends React.Component {
             <img className="blowupImage" alt="blowupImage" src={Realdeal} />
           </section>
           <section className="col-md-6">
-            <ImageGallery images={this.state.images} />
+            <ImageGallery selectCategory={this.selectCategory} images={this.state.images} />
           </section>
         </main>
       </section>
