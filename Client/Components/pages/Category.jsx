@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import _ from 'lodash';
-
+import SearchFilters from '../SubComponents/SearchFilters';
 import ImageGallery from '../SubComponents/ImageGallery';
 
 class Category extends React.Component {
@@ -39,10 +39,7 @@ class Category extends React.Component {
   render() {
     return (
       <section className="categoryPage">
-        <section className="selectionBar">
-          {/* // TODO make navbar for component selection */}
-          <h4>{ this.state.category }</h4>
-        </section>
+        <SearchFilters category={this.state.category} />
         <ImageGallery images={this.state.photos} />
       </section>
     );
