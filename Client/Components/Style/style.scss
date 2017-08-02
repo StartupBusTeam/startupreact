@@ -9,6 +9,7 @@ html, body, main, #app, .app {
 
 .header {
     height:8rem;
+    margin-left: 2%;
 }
 // HomePage
 .logolink {
@@ -98,23 +99,38 @@ a {
     display: flex;
     justify-content: flex-start;
     align-items: baseline;
+    border-right: solid 2px #0078d7;
+
   }
-  .imageGallery {
-    border-left: solid 2px #0078d7;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+
   .craftImage {
-    width: 22%;
+    // width: 22%;
     margin: .5rem;
   }
   .blowupImage{
     width: 100%;
   }
+}
+.imageGallery {
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+/////Category Page
+.categoryPage {
+  width: 95%;
+  margin: 0 auto;
+}
+.selectionBar {
+  border-bottom: solid 2px #0078d7;
+  font-size: 2rem;
+  color: #0078d7;
+  margin: 0 auto 1rem auto;
+  padding-left: 3%;
 }
 
 

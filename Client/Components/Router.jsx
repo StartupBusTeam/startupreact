@@ -8,13 +8,13 @@ import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Contact from './pages/contact';
 import MRH_LOGO from './assets/MRH.png';
-// import Category from  './pages/Category'
+import Category from  './pages/Category'
 
 class Approutes extends React.Component {
   constructor() {
     super();
     this.state = {
-      category: '',
+      category: 'Miscellaneous',
     };
     this.selectCategory = this.selectCategory.bind(this);
   }
@@ -31,14 +31,14 @@ class Approutes extends React.Component {
         <div className="app">
           <img className="header" alt="MRHLogo" src={MRH_LOGO} />
           <Nav />
-          <Switch>
-            <Route path="/" render={() => <App selectCategory={this.selectCategory} />} />
+          {/* <Switch> */}
+            {/* <Route path="/" render={() => <App selectCategory={this.selectCategory} />} /> */}
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
-            {/* <Route path="/category" component={Category} /> */}
+            <Route path="/category" render={() => <Category category={this.state.category} />} />
             <Route path="*" exact component={App} />
             <Route component={Err} />
-          </Switch>
+          {/* </Switch> */}
           <section className="thevoid" />
         </div>
       </BrowserRouter>

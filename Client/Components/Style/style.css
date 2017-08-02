@@ -2,7 +2,8 @@ html, body, main, #app, .app {
   height: 95%; }
 
 .header {
-  height: 8rem; }
+  height: 8rem;
+  margin-left: 2%; }
 
 .logolink {
   margin-top: 2px;
@@ -80,20 +81,32 @@ a {
   .mainBox .blowupBox {
     display: flex;
     justify-content: flex-start;
-    align-items: baseline; }
-  .mainBox .imageGallery {
-    border-left: solid 2px #0078d7;
-    flex-wrap: wrap;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+    align-items: baseline;
+    border-right: solid 2px #0078d7; }
   .mainBox .craftImage {
-    width: 22%;
     margin: .5rem; }
   .mainBox .blowupImage {
     width: 100%; }
+
+.imageGallery {
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; }
+
+.categoryPage {
+  width: 95%;
+  margin: 0 auto; }
+
+.selectionBar {
+  border-bottom: solid 2px #0078d7;
+  font-size: 2rem;
+  color: #0078d7;
+  margin: 0 auto 1rem auto;
+  padding-left: 3%; }
 
 .presentationblocks {
   text-align: center;
