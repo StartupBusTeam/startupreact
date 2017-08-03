@@ -13,7 +13,6 @@ class Category extends React.Component {
       selectedArtPiece: null,
       modalOpen: true,
     };
-    console.log(props)
     this.getPhotos = this.getPhotos.bind(this);
     this.openModal = this.openModal.bind(this);
   }

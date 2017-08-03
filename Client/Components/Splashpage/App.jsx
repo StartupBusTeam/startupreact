@@ -1,25 +1,27 @@
 import React from 'react';
 import ImageGallery from '../SubComponents/ImageGallery'
-import Realdeal from '../assets/real-deal-logo.png';
+import ArtPieces from '../assets/projectdata';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      artpieces: [1, 2, 3, 4, 5, 6, 7, 8, 9],
-      blowUp: Realdeal,
+      artpieces: ArtPieces.data,
+      blowUp: ArtPieces.data[0].image,
     };
-    console.log(props)
   }
   render() {
     return (
       <section className="app" >
         <main className="row mainBox">
           <section className="col-md-6 blowupBox">
-            <img className="blowupImage" alt="blowupImage" src={Realdeal} />
+            <img className="blowupImage" alt="blowupImage" src={this.state.blowUp} />
           </section>
           <section className="col-md-6">
-            <ImageGallery selectCategory={this.props.selectCategory} artpieces={this.state.artpieces} />
+            <ImageGallery
+              selectCategory={this.props.selectCategory}
+              artpieces={this.state.artpieces}
+            />
           </section>
         </main>
       </section>

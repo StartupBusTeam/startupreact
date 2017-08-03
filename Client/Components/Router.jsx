@@ -9,7 +9,7 @@ import Login from './pages/Login';
 import Contact from './pages/contact';
 import MRH_LOGO from './assets/MRH.png';
 import Category from  './pages/Category'
-import Bio from 'pages/Bio.jsx';
+import Bio from './pages/Bio';
 
 class Approutes extends React.Component {
   constructor() {

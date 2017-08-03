@@ -8,8 +8,8 @@ const Nav = () => (
       <li>
         <Link to="/Login">Login/Signup <span className="sr-only">(current)</span></Link>
       </li>
-      <li><Link to="/personal">Personal</Link></li>
-      <li><Link to="/contact">Contact</Link></li>
+      {/* <li><Link to="/personal">Personal</Link></li> */}
+      <li><Link to="/bio">My Profile</Link></li>
       <li><Link to="/">Home</Link></li>
     </ul>
   </nav>

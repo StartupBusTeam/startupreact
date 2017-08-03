@@ -1,12 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-import Realdeal from '../assets/real-deal-logo.png';
-import _ from 'lodash'
-const image = {
-  source: Realdeal,
-  category: 'category',
-};
+import _ from 'lodash';
 
 const ImageGallery = ({
   artpieces,
@@ -19,17 +13,18 @@ const ImageGallery = ({
       <article className="imageGallery">
         {artpieces.map(artpiece => (
           <Link
-            key={artpiece}
+            className="craftLink"
+            key={artpiece.category}
             to="/category"
-            onClick={() => selectCategory(image.category)}
+            onClick={() => selectCategory(artpiece.category)}
           >
             {/* TODO  Replace with art objec*/}
             <img
               role="presentation"
               className="craftImage"
               alt="craftImage"
-              value={image.category}
-              src={image.source}
+              value={artpiece.category}
+              src={artpiece.image}
             />
           </Link>
         ))}
@@ -39,7 +34,8 @@ const ImageGallery = ({
   return (
     <article className="imageGallery">
       {artpieces.map(artpiece => (
-        <button
+        <a
+          className="craftLink"
           onClick={() => openModal(artpiece)}
         >
           {/* TODO  Replace with art objec*/}
@@ -47,11 +43,11 @@ const ImageGallery = ({
             role="presentation"
             className="craftImage"
             alt="craftImage"
-            value={image.category}
-            src={image.source}
-            key={artpiece}
+            value={artpiece.category}
+            src={artpiece.image}
+            key={artpiece.category}
           />
-        </button>
+        </a>
       ))}
     </article>
   );
