@@ -119,6 +119,8 @@ a {
   align-items: center;
   justify-content: center;
   text-align: center;
+  border-top: solid 2px blue;
+  padding-top: 1rem;
 }
 /////Category Page
 .categoryPage {
@@ -126,12 +128,11 @@ a {
   margin: 0 auto;
 }
 .selectionBar {
-  border-bottom: solid 2px #0078d7;
-  font-size: 2rem;
   color: #0078d7;
   margin: 0 auto 1rem auto;
-  padding: auto 0 auto 3%;
+  padding-top: 1rem;
   display: inline-flex;
+  font-size: 2rem;
 }
 .dropBox {
   background: white;
