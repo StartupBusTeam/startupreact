@@ -1,5 +1,5 @@
-html, body, main, #app, .app {
-  height: 95%; }
+html, body, main, .app, #app {
+  height: 100%; }
 
 .header {
   height: 8rem;
@@ -101,6 +101,7 @@ a {
 
 .categoryPage {
   width: 95%;
+  height: 90%;
   margin: 0 auto; }
 
 .selectionBar {
@@ -118,36 +119,12 @@ a {
 .dropdownItem:hover {
   background-color: lightblue; }
 
-.presentationblocks {
-  text-align: center;
-  max-width: 90%;
-  padding-left: 10%; }
-  .presentationblocks h2 {
-    font-size: 5rem; }
-  .presentationblocks p {
-    font-size: 3rem; }
-  .presentationblocks .btn {
-    color: rgba(88, 70, 180, 0.66);
-    font-size: 3rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%); }
-  .presentationblocks .presentationtitle {
-    border-bottom: #0504af;
-    border-bottom-style: solid;
-    margin-bottom: 2rem; }
-  .presentationblocks .present {
-    border: 0px;
-    background-color: #fcf75d;
-    border-bottom-style: ridge;
-    border-bottom-width: 3px;
-    border-color: #ed3724;
-    min-height: 75rem; }
-  .presentationblocks img {
-    opacity: .8;
-    height: 26rem;
-    width: 26rem; }
+.artModal .modalImage {
+  height: 60rem;
+  background: rgba(0, 120, 215, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
 #app {
   background-color: white;
@@ -165,54 +142,6 @@ a {
     padding-top: 25%;
     text-shadow: 2px 2px white; }
 
-.projectspage {
-  width: 90%;
-  margin-left: 5%; }
-  .projectspage .carouselbox {
-    text-align: right;
-    min-width: 65rem; }
-    .projectspage .carouselbox .btn {
-      background-color: rgba(88, 70, 180, 0.66);
-      color: #fcf75d;
-      -webkit-box-shadow: inset 0 1px 5px 5px #7468af;
-      box-shadow: inset 0 1px 5px 5px #7468af; }
-  .projectspage .project-title {
-    font-size: 3rem; }
-  .projectspage .project-explanation {
-    font-size: 2rem; }
-  .projectspage .carousel {
-    height: 40rem;
-    min-width: 60rem; }
-    .projectspage .carousel .carousel-inner .item .projectphoto {
-      margin: 0 auto;
-      line-height: 1;
-      max-height: 40rem;
-      min-height: 30rem; }
-  .projectspage .jumbo-container {
-    margin-top: 5%;
-    padding: 5% 2% 2% 2%;
-    border-bottom-color: rgba(88, 70, 180, 0.66);
-    border-bottom-style: dotted; }
-
-.personalpage {
-  margin-top: 5rem;
-  width: 80%;
-  margin-left: 10%;
-  height: 110%; }
-  .personalpage .personals {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    border-bottom-style: ridge;
-    border-bottom-width: 3px;
-    border-color: rgba(88, 70, 180, 0.66); }
-  .personalpage .image {
-    max-height: 35rem;
-    margin-left: auto;
-    margin-right: auto; }
-  .personalpage .personaltext {
-    margin-left: auto;
-    margin-right: auto; }
-
 .signUp {
   min-height: 80%;
   width: 80%; }
@@ -224,7 +153,7 @@ a {
 
 .thevoid {
   background-color: #0e0d57;
-  min-height: 10vh; }
+  min-height: 10%; }
 
 .contacts {
   width: 80%;

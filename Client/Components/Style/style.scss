@@ -2,9 +2,10 @@ $purple: rgba(88, 70, 180, 0.66);
 $yellow: rgb(252,247,93);
 $white: rgb(255,255,255);
 $blue: rgb(0,120,215);
+$shinyblue:rgba(0,120,215, .3);
 $pink: rgb(255,137,188);
-html, body, main, #app, .app {
-  height:95%;
+html, body, main, .app , #app{
+  height:100%;
 }
 
 .header {
@@ -125,6 +126,7 @@ a {
 /////Category Page
 .categoryPage {
   width: 95%;
+  height:90%;
   margin: 0 auto;
 }
 .selectionBar {
@@ -144,43 +146,19 @@ a {
   background-color: lightblue;
 }
 
-.presentationblocks {
-  text-align: center;
-  max-width: 90%;
-  padding-left: 10%;
-  h2 {
-    font-size: 5rem;
-  }
-  p {
-    font-size: 3rem;
-  }
-  .btn {
-    color:  $purple;
-    font-size: 3rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%);
-  }
-  .presentationtitle {
-    border-bottom: rgb(5,4,175);
-    border-bottom-style: solid;
-    margin-bottom: 2rem;
-  }
-  .present {
-    border: 0px;
-    background-color: $yellow;
-    border-bottom-style: ridge;
-    border-bottom-width: 3px;
-    border-color: rgb(237,55,36);
-    min-height: 75rem;
-  }
-  img {
-    opacity: .8;
-    height: 26rem;
-    width: 26rem;
+////moda
+.artModal {
+  .modalImage {
+    height: 60rem;
+    background: $shinyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
+
+
+/////////
 #app {
   background-color: $white;
   font-family: serif;
@@ -201,69 +179,8 @@ a {
 
 
 /////////////////////////
-.projectspage {
-  width : 90%;
-  margin-left: 5%;
-  .carouselbox {
-    text-align: right;
-    min-width: 65rem;
-    .btn {
-      background-color: $purple;
-      color: $yellow;
-      -webkit-box-shadow: inset 0 1px 5px 5px rgba(116,104,175,1);
-      box-shadow: inset 0 1px 5px 5px rgba(116,104,175,1);
-    }
-  }
-  .project-title {
-    font-size: 3rem;
-  }
-  .project-explanation {
-    font-size: 2rem;
-  }
-  .carousel {
-    height: 40rem;
-    min-width: 60rem;
-    .carousel-inner {
-      .item{
-        .projectphoto {
-          margin: 0 auto;
-          line-height: 1;
-          max-height: 40rem;
-          min-height: 30rem;
-        }
-      }
-    }
 
-  }
-  .jumbo-container {
-    margin-top: 5%;
-    padding: 5% 2% 2% 2%;
-    border-bottom-color: $purple;
-    border-bottom-style: dotted;
-  }
-}
-.personalpage {
-  margin-top : 5rem;
-  width: 80%;
-  margin-left: 10%;
-  height: 110%;
-  .personals {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    border-bottom-style: ridge;
-    border-bottom-width: 3px;
-    border-color: $purple;
-  }
-  .image {
-    max-height: 35rem;
-    margin-left: auto;
-    margin-right:auto;
-  }
-  .personaltext {
-    margin-left: auto;
-    margin-right:auto;
-  }
-}
+
 ////Signup page
 .signUp {
   min-height: 80%;
@@ -280,7 +197,7 @@ a {
 //////
 .thevoid {
   background-color: rgba(14,13,87,1);
-  min-height: 10vh;
+  min-height: 10%;
 }
 .contacts {
   width: 80%;

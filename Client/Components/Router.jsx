@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-// import createHistory from 'history/createBrowserHistory';
+import createHistory from 'history/createBrowserHistory';
 import App from './Splashpage/App';
 import Err from './Nav/error';
 import Nav from './Nav/nav';
@@ -9,6 +9,7 @@ import Login from './pages/Login';
 import Contact from './pages/contact';
 import MRH_LOGO from './assets/MRH.png';
 import Category from  './pages/Category'
+import Bio from 'pages/Bio.jsx';
 
 class Approutes extends React.Component {
   constructor() {
@@ -26,7 +27,7 @@ class Approutes extends React.Component {
   render() {
     return (
       <BrowserRouter
-        // history={createHistory}
+        history={createHistory}
       >
         <div className="app">
           <img className="header" alt="MRHLogo" src={MRH_LOGO} />
@@ -36,8 +37,8 @@ class Approutes extends React.Component {
             <Route path="/signup" exact component={Signup} />
             <Route path="/login" exact component={Login} />
             <Route path="/category" render={() => <Category category={this.state.category} />} />
+            <Route path="/bio" component={Bio} />
             <Route path="*" exact component={App} />
-            <Route component={Err} />
           </Switch>
           <section className="thevoid" />
         </div>

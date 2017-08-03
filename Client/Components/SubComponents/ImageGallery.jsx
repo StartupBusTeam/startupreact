@@ -8,19 +8,22 @@ const image = {
   category: 'category',
 };
 
-const ImageGallery = ({ images,
-  selectCategory ,
-  fromCategory
+const ImageGallery = ({
+  artpieces,
+  selectCategory,
+  fromCategory,
+  openModal = _.identity,
 }) => {
   if (!fromCategory) {
     return (
       <article className="imageGallery">
-        {images.map(ima => (
+        {artpieces.map(artpiece => (
           <Link
-            key={ima}
+            key={artpiece}
             to="/category"
             onClick={() => selectCategory(image.category)}
           >
+            {/* TODO  Replace with art objec*/}
             <img
               role="presentation"
               className="craftImage"
@@ -35,15 +38,18 @@ const ImageGallery = ({ images,
   }
   return (
     <article className="imageGallery">
-      {images.map(ima => (
-        <button>
+      {artpieces.map(artpiece => (
+        <button
+          onClick={() => openModal(artpiece)}
+        >
+          {/* TODO  Replace with art objec*/}
           <img
             role="presentation"
             className="craftImage"
             alt="craftImage"
             value={image.category}
             src={image.source}
-            key={ima}
+            key={artpiece}
           />
         </button>
       ))}

@@ -3,19 +3,23 @@ import axios from 'axios';
 import _ from 'lodash';
 import SearchFilters from '../SubComponents/SearchFilters';
 import ImageGallery from '../SubComponents/ImageGallery';
-
+import ArtPieceModal from '../SubComponents/ArtPieceModal'
 class Category extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       category: props.category,
-      photos: []
+      artpieces: [],
+      selectedArtPiece: null,
+      modalOpen: true,
     };
+    console.log(props)
     this.getPhotos = this.getPhotos.bind(this);
+    this.openModal = this.openModal.bind(this);
   }
   componentWillMount() {
     this.setState({
-      photos: _.range(1, 22),
+      artpieces: _.range(1, 22),
     });
     this.getPhotos();
   }
@@ -31,16 +35,26 @@ class Category extends React.Component {
     // axios(options)
     // .then(({ data }) => {
     //   this.setState({
-    //     photos: data,
+    //     artpieces: data,
     //   });
     // })
     // .catch(err => console.error(err));
+  }
+  openModal(selectedArtPiece = null) {
+    this.setState({
+      selectedArtPiece,
+      modalOpen: !this.state.modalOpen,
+    });
   }
   render() {
     return (
       <section className="categoryPage">
         <SearchFilters category={this.state.category} />
-        <ImageGallery images={this.state.photos} />
+        {!this.state.modalOpen ?
+          (<ImageGallery artpieces={this.state.artpieces} fromCategory={'category'} openModal={this.openModal} />)
+        : (
+          <ArtPieceModal history={this.props.history} artpiece={this.state.selectedArtPiece} />
+        )}
       </section>
     );
   }
