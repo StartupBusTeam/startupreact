@@ -130,9 +130,18 @@ a {
   font-size: 2rem;
   color: #0078d7;
   margin: 0 auto 1rem auto;
-  padding-left: 3%;
+  padding: auto 0 auto 3%;
+  display: inline-flex;
+}
+.dropBox {
+  background: white;
+  border: 0;
+  margin-right: 1rem;
 }
 
+.dropdownItem:hover {
+  background-color: lightblue;
+}
 
 .presentationblocks {
   text-align: center;

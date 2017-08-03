@@ -5,31 +5,56 @@ class SearchFilters extends React.Component {
     super(props);
     this.state = {
       category: props.category,
+      region: 'region',
     };
+    this.crafts = ['wood', 'metal', 'ceramic', 'glass', 'paper', 'basketry', 'jewelry', 'textiles', 'other'];
+    this.regions = ['North America', 'Central/South America', 'Europe', 'Africa', 'Asia', 'Austraila'];
+    this.categorySelect = this.categorySelect.bind(this);
+    this.regionSelect = this.regionSelect.bind(this);
+  }
+  categorySelect(e) {
+    const category = e.target.value;
+    this.setState({
+      category,
+    });
+  }
+  regionSelect(e) {
+    const region = e.target.value;
+    this.setState({
+      region,
+    });
   }
   render() {
     return (
       <section className="selectionBar">
-        {/* // TODO make navbar for component selection */}
-        <div className="dropdown">
-          <button
-            className="dropdown-toggle"
-            type="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            aria-expanded="false"
-          >
-            {this.state.category}
-            <span className="caret" />
-          </button>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenu1">
-            <li>item 1</li>
-            <li>item 2</li>
-            <li>item 3</li>
-            <li>item 4</li>
-          </ul>
-        </div>
-        {/* <h4>{ this.state.category }</h4> */}
+        <select
+          value={this.state.category}
+          onChange={this.categorySelect}
+          className="dropdown dropBox"
+        >
+          {this.state.category}
+          <span className="caret" />
+          <option
+            className="dropdownItem"
+            value={this.state.category}
+          >{this.state.category}</option>
+          {this.crafts.map(craft => (
+            <option className="dropdownItem" value={craft} >{craft}</option>
+            ))}
+        </select>
+        <div>Filter by region:</div>
+        <select
+          value={this.state.category}
+          onChange={this.regionSelect}
+          className="dropdown dropBox"
+        >
+          {this.state.category}
+          <span className="caret" />
+          <option className="dropdownItem" value={this.state.region} >{this.state.region}</option>
+          {this.regions.map(region => (
+            <option className="dropdownItem" value={region} >{region}</option>
+          ))}
+        </select>
       </section>
     );
   }
