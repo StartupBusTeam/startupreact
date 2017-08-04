@@ -8,6 +8,7 @@ const ImageGallery = ({
   fromCategory,
   openModal = _.identity,
 }) => {
+  console.log(artpieces)
   if (!fromCategory) {
     return (
       <article className="imageGallery">
@@ -35,6 +36,7 @@ const ImageGallery = ({
     <article className="imageGallery">
       {artpieces.map(artpiece => (
         <a
+          key={artpiece.category}
           className="craftLink"
           onClick={() => openModal(artpiece)}
         >
@@ -45,7 +47,6 @@ const ImageGallery = ({
             alt="craftImage"
             value={artpiece.category}
             src={artpiece.image}
-            key={artpiece.category}
           />
         </a>
       ))}

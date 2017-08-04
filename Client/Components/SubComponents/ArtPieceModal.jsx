@@ -5,15 +5,17 @@ import history from 'react-router-dom';
 const ArtPieceModal = ({ history, artpiece }) => (
   <article className="row artModal">
     <div className="col-md-9 modalImage">
-      <img className="modalImage" alt="art" src={'http://res.cloudinary.com/eperiou/image/upload/v1496279941/spurr2_n2gp8h.png'} />
+      <img className="modalImage" alt="art" src={artpiece.image} />
     </div>
     <section className="col-md-3">
+      <h1>{artpiece.name}</h1>
+      <h2>Category: {artpiece.category}</h2>
       <Link
         to={{
-          pathname: '/artisan',
+          pathname: '/bio',
           state: { artisan: 'artpiece.artisan' },
         }}
-      ><h1>Username</h1></Link>
+      ><h2>Visit the Artisan</h2></Link>
     </section>
   </article>
 );

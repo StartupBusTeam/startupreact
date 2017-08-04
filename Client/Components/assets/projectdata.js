@@ -16,6 +16,14 @@ import spoon1 from './craftstory/spoon-carving1.jpg';
 import spoon2 from './craftstory/spoon-carving-2.jpg';
 import spoon3 from './craftstory/spoon-carving-3.jpg';
 import spoon4 from './craftstory/spoon-carving-4.jpg';
+
+import Leslie from './Leslie/leslie.jpg'
+import tablecraft from './Leslie/finished.jpg'
+import step1 from './Leslie/pw02-01.jpg'
+import step2 from './Leslie/pw02-04.jpg'
+import step3 from './Leslie/pw02-05.jpg'
+import step4 from './Leslie/pw02-06.jpg'
+
 module.exports = {
   data: [
     {
@@ -66,30 +74,40 @@ module.exports = {
   ],
   craftStory: [
     {
-      image: spoon1,
-      step: 'Dishing the Bowl',
-      description: 'Makeing rough cuts across the grain and finishing cuts with the grain, to rough out the bowl.',
+      image: step1,
+      step: 'The Raw materials',
+      description: 'Marking rough black walnut for milling',
     },
     {
-      image: spoon3,
-      step: 'Shape the Outside of the Bowl',
-      description: 'Working on the outside of the bowl. Used a drawknife and handsaw to shape three large chamfers, two on each side and one on the end. Used a spokeshave to round over the edges of the facets.',
+      image: step4,
+      step: 'Glue-up process',
+      description: 'Gluing planks up into tops',
     },
     {
-      image: spoon4,
-      step: 'The Finishing Touches',
-      description: 'Finally, use the spokeshave to narrow down the shoulders.Leaving too much wood here, makes the spoon heavy, and bulky, so I prefer to use a rasp.',
+      image: step3,
+      step: 'Laying out',
+      description: 'Laying out slabs after sections have been glued-up',
+    },
+    {
+      image: step4,
+      step: 'Dry Assembly',
+      description: 'Verify construction by dry fitting all the pieces together',
+    },
+    {
+      image: tablecraft,
+      step: 'Final product',
+      description: 'Spray finish completed, and product is ready to hand over',
     },
   ],
   artistBio: {
-    name: 'James Goedert',
-    image: James,
-    bio: 'James is a New Orleans wood craftsman with multiple years experience in\
+    name: 'Leslie Selting',
+    image: Leslie,
+    bio: 'Leslie is a New Orleans wood craftsperson with multiple years experience in\
     making home goods like tables, chairs and construction.',
   },
   woodenSpoon: {
-    name: 'Wooden Spoon',
-    image: craft9,
+    name: 'Wooden Table',
+    image: tablecraft,
     category: 'Wood Carving',
   },
 };

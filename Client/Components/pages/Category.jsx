@@ -4,22 +4,23 @@ import _ from 'lodash';
 import SearchFilters from '../SubComponents/SearchFilters';
 import ImageGallery from '../SubComponents/ImageGallery';
 import ArtPieceModal from '../SubComponents/ArtPieceModal'
+import ArtPieces from '../assets/projectdata';
 class Category extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       category: props.category,
-      artpieces: [],
+      artpieces: [ArtPieces.woodenSpoon].concat(ArtPieces.data),
       selectedArtPiece: null,
-      modalOpen: true,
+      modalOpen: false,
     };
     this.getPhotos = this.getPhotos.bind(this);
     this.openModal = this.openModal.bind(this);
   }
   componentWillMount() {
-    this.setState({
-      artpieces: _.range(1, 22),
-    });
+    // this.setState({
+    //   artpieces: _.range(1, 22),
+    // });
     this.getPhotos();
   }
   getPhotos(category = this.state.category) {
@@ -40,6 +41,7 @@ class Category extends React.Component {
     // .catch(err => console.error(err));
   }
   openModal(selectedArtPiece = null) {
+    console.log(selectedArtPiece)
     this.setState({
       selectedArtPiece,
       modalOpen: !this.state.modalOpen,

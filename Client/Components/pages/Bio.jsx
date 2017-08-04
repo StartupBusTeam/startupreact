@@ -43,19 +43,18 @@ class Bio extends React.Component {
   }
   render() {
     return (
-      <section className="row mainBox">
+      <section className="row mainBox bioBox">
         <section className="col-md-3 artistBio" >
           <h4>{this.state.artist.name}</h4>
           <img className="bioPic" alt="bioPic" src={this.state.artist.image} />
           <p>{this.state.artist.bio}</p>
           <p>Contact info: James@email.com</p>
         </section>
-        <section className="col-md-10">
         {!this.state.bioModalOpen?
-          (<div>
+          (<secton className="col-md-9 bioArt">
             {this.state.artPieces.map((artpiece, ind ) => (
               <button
-                className="crafLink"
+                className="craftLink"
                 key={artpiece.category}
                 onClick={() => this.toggleBioModal(ind)}
               >
@@ -67,9 +66,8 @@ class Bio extends React.Component {
                 />
               </button>
             ))}
-          </div>
+          </secton>
         ) : <BioModal closeModal={this.toggleBioModal} story={ArtPieces.artistBio} />}
-        </section>
       </section>
     );
   }

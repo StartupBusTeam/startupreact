@@ -6,6 +6,7 @@ $shinyblue:rgba(0,120,215, .3);
 $pink: rgb(255,137,188);
 html, body, main, .app , #app{
   height:100%;
+  font-family:sans-serif;
 }
 
 .header {
@@ -113,23 +114,21 @@ a {
   max-height: 57rem;
 }
 .imageGallery {
-  flex-wrap: wrap;
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  min-height: 19%;
   height: 100%;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  // border-top: solid 2px $blue;
   padding-top: 1rem;
   overflow-y: auto;
 }
 .craftLink{
   height: 18rem;
-  width: 18rem;
+  width: 30%;
   margin: .5rem;
   display: flex;
-  background: $shinyblue;
+  // background: $shinyblue;
   align-items: center;
   justify-content: center;
 }
@@ -158,9 +157,10 @@ a {
 
 ////moda
 .artModal {
+  overflow-y: auto;
   .modalImage {
     height: 60rem;
-    background: $shinyblue;
+    // background: $shinyblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,9 +208,23 @@ a {
 .bioPic {
   max-width:100%;
 }
-.bioModalImage {
-  width:100%
+.bioBox {
+  height:90%;
 }
+.bioModalImage {
+  width: 100%
+}
+.artistBio {
+  margin-right: 1rem;
+}
+.bioArt {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  min-height: 19%;
+  overflow-y: auto;
+}
+
 //////
 .thevoid {
   background-color: rgba(14,13,87,1);
