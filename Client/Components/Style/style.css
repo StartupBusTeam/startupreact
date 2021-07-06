@@ -1,3 +1,11 @@
+html, body, main, .app, #app {
+  height: 100%;
+  font-family: sans-serif; }
+
+.header {
+  height: 8rem;
+  margin-left: 2%; }
+
 .logolink {
   margin-top: 2px;
   background-color: rgba(88, 70, 180, 0.66);
@@ -5,7 +13,7 @@
   border-width: 2px;
   border-color: #0504af;
   border-radius: 50px;
-  color: #f1ebba; }
+  color: #fcf75d; }
 
 .realdeallogo {
   width: 3rem; }
@@ -36,61 +44,103 @@ a {
 
 .navbar {
   margin-bottom: 0;
-  color: #f1ebba;
-  background-color: rgba(88, 70, 180, 0.66); }
+  color: #0078d7;
+  background-color: white; }
   .navbar .btn {
     width: 13rem; }
   .navbar a {
     font-size: 2rem;
-    color: #f1ebba;
+    color: #0078d7;
     width: 12rem; }
 
+.navbar {
+  border-bottom: solid 2px;
+  border-bottom-color: #0078d7;
+  border-top: solid 2px #0078d7;
+  border-top-color: #0078d7;
+  margin: 0 auto;
+  width: 95%; }
+
 .nav {
-  color: #f1ebba; }
+  color: #0078d7; }
   .nav .nav-tabs {
     border-left: solid;
     border-left-width: 1px;
-    border-color: #f1ebba; }
+    border-color: #0078d7; }
 
 .nav-tabs > li > a:hover {
-  color: rgba(88, 70, 180, 0.66); }
+  color: white; }
 
 .nav-tabs > li > a:focus {
-  color: rgba(88, 70, 180, 0.66); }
+  color: white; }
 
-.presentationblocks {
-  text-align: center;
+.mainBox {
+  display: flex;
+  justify-content: space-between;
+  margin: 5rem auto 0 auto;
+  width: 94%; }
+  .mainBox .blowupBox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    border-right: solid 2px #0078d7; }
+
+.craftImage {
   max-width: 90%;
-  padding-left: 10%; }
-  .presentationblocks h2 {
-    font-size: 5rem; }
-  .presentationblocks p {
-    font-size: 3rem; }
-  .presentationblocks .btn {
-    color: rgba(88, 70, 180, 0.66);
-    font-size: 3rem;
-    position: absolute;
-    bottom: 5%;
-    left: 50%;
-    transform: translate(-50%); }
-  .presentationblocks .presentationtitle {
-    border-bottom: #0504af;
-    border-bottom-style: solid;
-    margin-bottom: 2rem; }
-  .presentationblocks .present {
-    border: 0px;
-    background-color: #f1ebba;
-    border-bottom-style: ridge;
-    border-bottom-width: 3px;
-    border-color: #ed3724;
-    min-height: 75rem; }
-  .presentationblocks img {
-    opacity: .8;
-    height: 26rem;
-    width: 26rem; }
+  max-height: 90%;
+  margin: .5rem; }
+
+.blowupImage {
+  max-height: 57rem; }
+
+.imageGallery {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  min-height: 19%;
+  height: 100%;
+  width: 100%;
+  padding-top: 1rem;
+  overflow-y: auto; }
+
+.craftLink {
+  height: 18rem;
+  width: 30%;
+  margin: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.categoryPage {
+  width: 95%;
+  height: 90%;
+  margin: 0 auto; }
+
+.selectionBar {
+  color: #0078d7;
+  margin: 0 auto 1rem auto;
+  padding-top: 1rem;
+  display: inline-flex;
+  font-size: 2rem; }
+
+.dropBox {
+  background: white;
+  border: 0;
+  margin-right: 1rem; }
+
+.dropdownItem:hover {
+  background-color: lightblue; }
+
+.artModal {
+  overflow-y: auto; }
+  .artModal .modalImage {
+    height: 60rem;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
 #app {
-  background-color: #f1ebba;
+  background-color: white;
   font-family: serif; }
 
 .errorpage {
@@ -105,57 +155,38 @@ a {
     padding-top: 25%;
     text-shadow: 2px 2px white; }
 
-.projectspage {
-  width: 90%;
-  margin-left: 5%; }
-  .projectspage .carouselbox {
-    text-align: right;
-    min-width: 65rem; }
-    .projectspage .carouselbox .btn {
-      background-color: rgba(88, 70, 180, 0.66);
-      color: #f1ebba;
-      -webkit-box-shadow: inset 0 1px 5px 5px #7468af;
-      box-shadow: inset 0 1px 5px 5px #7468af; }
-  .projectspage .project-title {
-    font-size: 3rem; }
-  .projectspage .project-explanation {
-    font-size: 2rem; }
-  .projectspage .carousel {
+.signUp {
+  min-height: 80%;
+  width: 80%; }
+  .signUp .form-control {
+    margin-bottom: 1rem; }
+  .signUp .bio {
+    width: 100%;
     height: 40rem;
-    min-width: 60rem; }
-    .projectspage .carousel .carousel-inner .item .projectphoto {
-      margin: 0 auto;
-      line-height: 1;
-      max-height: 40rem;
-      min-height: 30rem; }
-  .projectspage .jumbo-container {
-    margin-top: 5%;
-    padding: 5% 2% 2% 2%;
-    border-bottom-color: rgba(88, 70, 180, 0.66);
-    border-bottom-style: dotted; }
+    border: solid black 1px; }
 
-.personalpage {
-  margin-top: 5rem;
-  width: 80%;
-  margin-left: 10%;
-  height: 110%; }
-  .personalpage .personals {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    border-bottom-style: ridge;
-    border-bottom-width: 3px;
-    border-color: rgba(88, 70, 180, 0.66); }
-  .personalpage .image {
-    max-height: 35rem;
-    margin-left: auto;
-    margin-right: auto; }
-  .personalpage .personaltext {
-    margin-left: auto;
-    margin-right: auto; }
+.bioPic {
+  max-width: 100%; }
+
+.bioBox {
+  height: 90%; }
+
+.bioModalImage {
+  width: 100%; }
+
+.artistBio {
+  margin-right: 1rem; }
+
+.bioArt {
+  display: flex;
+  align-content: flex-start;
+  flex-flow: row wrap;
+  min-height: 19%;
+  overflow-y: auto; }
 
 .thevoid {
   background-color: #0e0d57;
-  min-height: 10vh; }
+  min-height: 10%; }
 
 .contacts {
   width: 80%;
